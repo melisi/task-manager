@@ -1,0 +1,171 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background: @gray-lighter;
+}
+
+header,
+footer,
+section {
+	width: 100%;
+	.clearfix();
+	position: relative;
+}
+
+ul {
+	.clearfix();
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.small-screen-only {
+	display: none;
+	text-align: center;
+	margin-bottom: 30px;
+}
+a {
+	.transition(all .3s linear);
+	&:hover {
+		text-decoration: none;
+	}
+}
+h1 {
+  font-family: 'latolight', serif;
+  font-size: 24px;
+  line-height: 20px;
+}
+h2 {
+  font-size: 21px;
+  line-height: 21px;
+  font-family: 'merriweather';
+}
+h3,
+h4,
+h5,
+h6 {
+  font-size: 18px;
+  line-height: 21px;
+  font-family: 'latolight';
+  text-transform: uppercase;
+}
+p {
+  font-size: 16px;
+  line-height: 21px;
+  font-family: 'latolight';
+}
+
+.box {
+	padding: 15px;
+	background: @white;
+	min-height: 150px;
+	margin-bottom: 15px;
+	h6 {
+		margin-top: 0;
+	}
+	ul {
+		margin-bottom: 20px;
+	}
+	input {
+		margin-bottom: 30px;
+	}
+}
+
+header {
+	background: @white;
+	height: 60px;
+	line-height: 60px;
+	margin-bottom: 30px;
+	h1 {
+		margin: 20px 0 0 0;
+	}
+	a {
+		display: block;
+		padding: 0 20px;
+		width: 160px;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+ul#tasks-list {
+	> li {
+		padding: 15px;
+		background: @white;
+		margin-bottom: 15px;
+		.box-shadow(0px 1px 2px #ccc);
+		.clearfix();
+		div.task {
+			div.info {
+				margin-top: -15px;
+				span {
+					display: inline-block;
+					border-color: @gray-lighter;
+					border-width: 0 1px 1px 1px;
+					border-style: solid;
+					a {
+						text-decoration: underline;
+					}
+					&.task-id {
+						
+						padding: 10px;
+					}
+
+					&.task-category {
+						a {
+							display: block;
+							padding: 10px;
+						}
+					}
+					&.task-assignee {
+						float: right;
+						padding: 10px;
+						a {
+							
+						}
+					}
+				}
+			}
+			div.action {
+				margin: 15px 0;
+				height: 35px;
+				line-height: 35px;
+				h2 {
+					margin: 0;
+					display: inline-block;
+				}
+				ul {
+					li {
+						float: left;
+						margin-left: 10px;
+					}
+				}
+			}
+			div.description {
+				display: none;
+				
+			}
+		}
+	}
+}
+
+ul#filters-list {
+	margin-bottom: 30px;
+	li {
+		&.filter-on {
+			border: 1px solid @gray-light;
+		}
+		margin-bottom: 3px;
+		padding: 5px;
+		a {
+			float: right;
+		}
+	}
+}
+
+footer {
+	padding: 20px 0;
+	text-align: center;
+}
